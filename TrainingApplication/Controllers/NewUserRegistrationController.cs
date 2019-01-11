@@ -38,7 +38,7 @@ namespace TrainingApplication.Controllers
         
         public ActionResult LogIn()
         {
-            return View();
+               return View();
         }
 
         [HttpPost]
@@ -60,7 +60,6 @@ namespace TrainingApplication.Controllers
                     Session["Username"] = details.FirstOrDefault().Username;
                     return RedirectToAction("welcome");
                 }
-
             }
             else
             {
