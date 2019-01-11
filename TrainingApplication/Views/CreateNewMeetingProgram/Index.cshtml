@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TrainingApplication.Models.CreateNewMeetingProgram>
+
+@{
+    ViewBag.Title = "Create";
+   
+}
+
+
+
+<p><h4>Meeting Program List</h4>
+    <br>
+    </p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.topic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.startTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attendeeLimit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.topic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.startTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attendeeLimit)
+        </td>
+        <td>
+            @Html.ActionLink("Manage", "Edit", new { id=item.meetingID })  |
+            @Html.ActionLink("RSVP", "Details", new { id=item.meetingID })  
+           
+        </td>
+    </tr>
+}
+
+</table>

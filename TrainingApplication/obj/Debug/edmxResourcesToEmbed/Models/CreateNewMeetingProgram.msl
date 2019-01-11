@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrainingApplicationModel1StoreContainer" CdmEntityContainer="TrainingApplicationEntities2">
+    <EntitySetMapping Name="CreateNewMeetingPrograms">
+      <EntityTypeMapping TypeName="TrainingApplicationModel1.CreateNewMeetingProgram">
+        <MappingFragment StoreEntitySet="CreateNewMeetingProgram">
+          <ScalarProperty Name="trainingID" ColumnName="trainingID" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="trainerName" ColumnName="trainerName" />
+          <ScalarProperty Name="attendeeLimit" ColumnName="attendeeLimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

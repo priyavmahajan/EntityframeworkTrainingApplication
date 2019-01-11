@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrainingApplicationModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CreateNewMeetingProgram">
+    <Key>
+      <PropertyRef Name="trainingID" />
+    </Key>
+    <Property Name="trainingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="startTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="endTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="trainerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="attendeeLimit" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TrainingApplicationEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CreateNewMeetingPrograms" EntityType="Self.CreateNewMeetingProgram" />
+  </EntityContainer>
+</Schema>
