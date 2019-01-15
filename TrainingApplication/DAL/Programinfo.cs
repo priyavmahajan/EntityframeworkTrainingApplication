@@ -24,6 +24,6 @@ namespace TrainingApplication.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        
+        public System.Data.Entity.DbSet<TrainingApplication.Models.UserLogin> UserLogins { get; set; }
     }
 }

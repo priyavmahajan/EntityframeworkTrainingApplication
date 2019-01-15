@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Create";
     var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
-    string cLayout = "~/Views/Shared/_myLayout.cshtml";
+    Layout = "~/Views/Shared/_myLayout.cshtml";
 }
 <br>
 <br>

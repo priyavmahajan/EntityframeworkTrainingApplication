@@ -142,6 +142,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewUserRegistrationController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\UserLoginController.cs" />
     <Compile Include="DAL\Programinfo.cs" />
     <Compile Include="DAL\ProgramInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,6 +172,7 @@
       <DependentUpon>NewUserRegistrations.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +253,13 @@
     <Content Include="Views\NewUserRegistration\Details.cshtml" />
     <Content Include="Views\NewUserRegistration\Edit.cshtml" />
     <Content Include="Views\NewUserRegistration\Index.cshtml" />
+    <Content Include="Views\UserLogin\Create.cshtml" />
+    <Content Include="Views\UserLogin\Delete.cshtml" />
+    <Content Include="Views\UserLogin\Details.cshtml" />
+    <Content Include="Views\UserLogin\Edit.cshtml" />
+    <Content Include="Views\UserLogin\Index.cshtml" />
+    <Content Include="Views\UserLogin\LogIn.cshtml" />
+    <Content Include="Views\UserLogin\wellcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
