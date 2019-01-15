@@ -2,7 +2,8 @@
 
 @{
     ViewBag.Title = "Create";
-   
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    string cLayout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>New User Registration</h2>

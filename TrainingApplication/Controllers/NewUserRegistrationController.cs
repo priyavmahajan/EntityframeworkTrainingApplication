@@ -18,6 +18,7 @@ namespace TrainingApplication.Controllers
         // GET: NewUserRegistration
         public ActionResult Index()
         {
+           
             return View(db.newUserRegistrations.ToList());
         }
 

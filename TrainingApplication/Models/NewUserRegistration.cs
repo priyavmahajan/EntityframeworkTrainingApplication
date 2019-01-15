@@ -35,7 +35,7 @@ namespace TrainingApplication.Models
         public string ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "Please Enter Email Address")]
-        [Display(Name = "UserName")]
+        [Display(Name = "Email ID")]
         [RegularExpression(".+@.+\\..+", ErrorMessage = "Please Enter Correct Email Address")]
         public string Email { get; set; }
 

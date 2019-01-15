@@ -82,3 +82,4 @@ C:\Users\priyankaj\source\repos\TrainingApplication\TrainingApplication\obj\Debu
 C:\Users\priyankaj\source\repos\TrainingApplication\TrainingApplication\obj\Debug\TrainingApplication.csproj.CopyComplete
 C:\Users\priyankaj\source\repos\TrainingApplication\TrainingApplication\obj\Debug\TrainingApplication.dll
 C:\Users\priyankaj\source\repos\TrainingApplication\TrainingApplication\obj\Debug\TrainingApplication.pdb
+C:\Users\priyankaj\source\repos\TrainingApplication\TrainingApplication\obj\Debug\TrainingApplication.csprojAssemblyReference.cache
