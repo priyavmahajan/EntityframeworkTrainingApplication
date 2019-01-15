@@ -85,7 +85,7 @@ namespace TrainingApplication.Controllers
             {
                 db.Entry(room).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Create");
+                return RedirectToAction("Edit");
             }
             return View(room);
         }
