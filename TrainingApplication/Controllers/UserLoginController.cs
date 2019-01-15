@@ -24,6 +24,38 @@ namespace TrainingApplication.Controllers
         {
             return View();
         }
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AdminLogin(UserLogin reg)
+        {
+            if (ModelState.IsValid)
+            {
+                var details = (from userlist in db.newUserRegistrations
+                               where userlist.Username == reg.Username && userlist.Password == reg.Password
+                               select new
+                               {
+                                   userlist.UserId,
+                                   userlist.Username
+                               }).ToList();
+
+
+                if (details.FirstOrDefault() != null)
+                {
+                    Session["UserId"] = details.FirstOrDefault().UserId;
+                    Session["Username"] = details.FirstOrDefault().Username;
+                    return RedirectToAction("wellcomeAdmin");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Invalid credentials");
+            }
+            return View(reg);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -44,7 +76,7 @@ namespace TrainingApplication.Controllers
                 {
                     Session["UserId"] = details.FirstOrDefault().UserId;
                     Session["Username"] = details.FirstOrDefault().Username;
-                    return RedirectToAction("wellcome","UserLogin");
+                    return RedirectToAction("wellcome");
                 }
             }
             else
@@ -54,6 +86,11 @@ namespace TrainingApplication.Controllers
             return View(reg);
         }
         public ActionResult wellcome()
+        {
+            return View();
+
+        }
+        public ActionResult wellcomeAdmin()
         {
             return View();
 

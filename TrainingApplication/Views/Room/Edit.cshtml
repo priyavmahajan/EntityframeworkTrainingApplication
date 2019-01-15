@@ -2,10 +2,11 @@
 
 @{
     ViewBag.Title = "Edit";
-  
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    Layout = "~/Views/Shared/_myLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Manage Program</h2>
 
 
 @using (Html.BeginForm())
@@ -13,7 +14,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Room</h4>
+       
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.roomNo)
@@ -34,9 +35,7 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

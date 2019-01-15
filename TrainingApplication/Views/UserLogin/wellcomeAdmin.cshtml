@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "wellcome";
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    Layout = "~/Views/Shared/_aLayout.cshtml";
+}
+
+<h4>Wellcome Admin</h4>
+
+<h4>@Session["Username"].ToString()</h4>
+
+<h4>@Html.ActionLink("Manage Room", "Index", "Room")</h4><br>
+<h4>@Html.ActionLink("Manage Program", "Edit", "Room")</h4>
