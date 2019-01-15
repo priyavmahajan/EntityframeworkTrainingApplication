@@ -149,23 +149,26 @@
     </Compile>
     <Compile Include="Models\CreateNewMeetingProgram.cs" />
     <Compile Include="Models\CreateNewTrainingProgram.cs" />
-    <Compile Include="Models\LoginModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LoginModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LoginModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LoginModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LoginModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LoginModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\NewUserRegistration.cs">
-      <DependentUpon>LoginModel.tt</DependentUpon>
+      <DependentUpon>NewUserRegistrations.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewUserRegistration.Designer.cs">
+      <DependentUpon>NewUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewUserRegistrations.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewUserRegistrations.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewUserRegistrations.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewUserRegistrations.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewUserRegistrations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewUserRegistrations.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Room.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,24 +182,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\LoginModel.Context.tt">
+    <Content Include="Models\NewUserRegistrations.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LoginModel.edmx</DependentUpon>
-      <LastGenOutput>LoginModel.Context.cs</LastGenOutput>
+      <DependentUpon>NewUserRegistrations.edmx</DependentUpon>
+      <LastGenOutput>NewUserRegistrations.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\LoginModel.tt">
+    <Content Include="Models\NewUserRegistrations.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LoginModel.edmx</DependentUpon>
-      <LastGenOutput>LoginModel.cs</LastGenOutput>
+      <DependentUpon>NewUserRegistrations.edmx</DependentUpon>
+      <LastGenOutput>NewUserRegistrations.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\LoginModel.edmx">
+    <EntityDeploy Include="Models\NewUserRegistrations.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LoginModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>NewUserRegistrations.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\LoginModel.edmx.diagram">
-      <DependentUpon>LoginModel.edmx</DependentUpon>
+    <Content Include="Models\NewUserRegistrations.edmx.diagram">
+      <DependentUpon>NewUserRegistrations.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -242,14 +245,12 @@
     <Content Include="Views\Room\Index.cshtml" />
     <Content Include="Views\Home\MyLayout.cshtml" />
     <Content Include="Views\Shared\_myLayout.cshtml" />
+    <Content Include="Views\Shared\_aLayout.cshtml" />
     <Content Include="Views\NewUserRegistration\Create.cshtml" />
     <Content Include="Views\NewUserRegistration\Delete.cshtml" />
     <Content Include="Views\NewUserRegistration\Details.cshtml" />
     <Content Include="Views\NewUserRegistration\Edit.cshtml" />
     <Content Include="Views\NewUserRegistration\Index.cshtml" />
-    <Content Include="Views\NewUserRegistration\LogIn.cshtml" />
-    <Content Include="Views\NewUserRegistration\welcome.cshtml" />
-    <Content Include="Views\Shared\_aLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

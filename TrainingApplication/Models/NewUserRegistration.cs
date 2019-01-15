@@ -17,27 +17,36 @@ namespace TrainingApplication.Models
     {
         [Key]
         public int UserId { get; set; }
-        [Required]
-       
-        [StringLength(150)]
-        [Display(Name = "User Name: ")]
+        [Required(ErrorMessage = "Please Enter user name")]
+        [Display(Name = "User Name")]
         public string Username { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Please Enter Password")]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [StringLength(150, MinimumLength = 6)]
-        [Display(Name = "Password: ")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
+
+        [Required(ErrorMessage = "Please Enter Confirm Password")]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        [Required]
-        [EmailAddress]
-        [StringLength(150)]
-        [Display(Name = "Email Address: ")]
+
+        [Required(ErrorMessage = "Please Enter Email Address")]
+        [Display(Name = "UserName")]
+        [RegularExpression(".+@.+\\..+", ErrorMessage = "Please Enter Correct Email Address")]
         public string Email { get; set; }
-        [Required]
-        [Display(Name = "Created Date: ")]
+
+        [Required(ErrorMessage ="Please Enter Date")]
+        [Display(Name = "Created Date")]
+        [DataType(DataType.Date)]
         public System.DateTime CreatedDate { get; set; }
-        [Required]
-        [Display(Name = "Last Login Date: ")]
-        public Nullable<System.DateTime> LastLoginDate { get; set; }
+
+        [Required(ErrorMessage = "Please Enter Date")]
+        [Display(Name = "Last Login Date")]
+        [DataType(DataType.Date)]
+        public System.DateTime LastLoginDate { get; set; }
     }
 }

@@ -2,10 +2,8 @@
 
 @{
     ViewBag.Title = "Index";
-    // Layout = "~/Views/_ViewStart.cshtml";
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    string cLayout = "~/Views/Shared/_myLayout.cshtml";
 }
-<h1>WelCome: </h1>
-@*<h1>@Session["Username"].ToString()</h1>*@
-
-
-
+<h4>Wellcome</h4>
+<h4>@Session["username"].ToString()</h4>

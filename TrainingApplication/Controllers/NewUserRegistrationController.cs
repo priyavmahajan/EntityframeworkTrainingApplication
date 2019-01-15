@@ -35,43 +35,7 @@ namespace TrainingApplication.Controllers
             }
             return View(newUserRegistration);
         }
-        
-        public ActionResult LogIn()
-        {
-               return View();
-        }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult LogIn(NewUserRegistration reg)
-        {
-            if (ModelState.IsValid)
-            {
-                var details = (from userlist in db.newUserRegistrations
-                               where userlist.Username == reg.Username && userlist.Password == reg.Password
-                               select new
-                               {
-                                   userlist.UserId,
-                                   userlist.Username
-                               }).ToList();
-                if (details.FirstOrDefault() != null)
-                {
-                    Session["UserId"] = details.FirstOrDefault().UserId;
-                    Session["Username"] = details.FirstOrDefault().Username;
-                    return RedirectToAction("welcome");
-                }
-            }
-            else
-            {
-                ModelState.AddModelError("", "Invalid credentials");
-            }
-            return View(reg);
-        }
-        public ActionResult welcome()
-        {
-            return View();
-
-        }
         // GET: NewUserRegistration/Create
         public ActionResult Create()
         {
